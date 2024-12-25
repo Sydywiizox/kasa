@@ -3,6 +3,7 @@ import globals from 'globals'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
+import path from 'path'
 
 export default [
   { ignores: ['dist'] },
@@ -33,6 +34,20 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+    },
+    settings: {
+      'import/resolver': {
+        alias: {
+          map: [
+            ['@src', path.resolve(__dirname, './src')],
+            ['@assets', path.resolve(__dirname, './src/assets')],
+            ['@components', path.resolve(__dirname, './src/components')],
+            ['@pages', path.resolve(__dirname, './src/pages')],
+            ['@data', path.resolve(__dirname, './src/data')],
+          ],
+          extensions: ['.js', '.jsx', '.json'],
+        },
+      },
     },
   },
 ]
