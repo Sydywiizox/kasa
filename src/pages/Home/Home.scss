@@ -1,0 +1,24 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 50px;
+        justify-items: center;
+        padding-inline: 50px;
+        padding-block: 56px 43px;
+        background-color: #f6f6f6;
+        border-radius: 25px;
+        @media screen and (min-width: 1500px) { 
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and (max-width: 768px) {
+            gap: 20px;
+            padding: 0;
+            grid-template-columns: repeat(1, minmax(335px, 1fr));
+            background-color: transparent;
+        }
+    }
+}

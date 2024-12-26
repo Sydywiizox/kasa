@@ -4,7 +4,9 @@
     align-items: center;
     height: 68px;
     font-weight: 500;
+    margin-bottom: 50px;
     @media screen and (max-width: 768px) {
+        margin-bottom: 27px;
         height: 46.88px;
         img {
             height: 100%;
