@@ -3,10 +3,6 @@
     background-color: #f6f6f673;
     border-radius: 5px;
     height: max-content;
-    &__container {
-        display: flex;
-        gap: 10px;
-    }
     &__header {
         color: #fff;
         display: flex;
@@ -17,12 +13,18 @@
         font-weight: 700;
         font-size: 18px;
         align-items: center;
+        @media screen and (max-width: 768px) {
+            font-size: 13px;
+        }
         .collapse__button {
             color: #fff;
             border: none;
             background-color: transparent;
             cursor: pointer;
             font-size: 24px;
+            @media screen and (max-width: 768px) {
+                font-size: 17px;
+            }
         }
     }
     &__content {
@@ -30,6 +32,9 @@
         overflow: hidden;
         transition: max-height 0.3s ease-out, padding 0.3s ease-out;
         padding: 0 20px;
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+        }
     }
     &__content--open {
         max-height: max-content;

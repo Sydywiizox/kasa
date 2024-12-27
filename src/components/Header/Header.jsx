@@ -5,7 +5,7 @@ import './Header.scss'
 function Header() {
     return (
         <header className='header'>
-            <img src={logo} alt="Kasa logo" />
+            <NavLink to="/"><img src={logo} alt="Kasa logo" /></NavLink>
             <nav>
                 <ul className='header__nav'>
                     <li>

@@ -1,11 +1,14 @@
-import './Card.scss';
+import { NavLink } from "react-router-dom";
+import "./Card.scss";
 
-function Card ({ image, alt, title }) {
+function Card({ image, alt, title, id }) {
     return (
-        <div className="card">
-            {image && <img src={image} alt={alt} className="card__image" />}
-            <h2 className="card__title">{title}</h2>
-        </div>
+        <NavLink to={`/SingleProperty/${id}`}>
+            <div className="card">
+                {image && <img src={image} alt={alt} className="card__image" />}
+                <h2 className="card__title">{title}</h2>
+            </div>
+        </NavLink>
     );
 }
 

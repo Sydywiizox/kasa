@@ -6,9 +6,9 @@
     font-weight: 500;
     margin-block: 45px 50px;
     @media screen and (max-width: 768px) {
-        margin-bottom: 27px;
+        margin-block: 20px 27px;
         height: 46.88px;
-        img {
+        a, img {
             height: 100%;
         }
     }
@@ -31,6 +31,17 @@
         @media screen and (max-width: 768px) {
             font-size: 12px;
         }
+    }
+}
+
+.body_error404 .header {
+    margin-block: 40px 38px;
+}
+
+.body_about .header {
+    margin-block: 40px 38px;
+    @media screen and (max-width: 768px) {
+        margin-block: 20px 19px;
     }
 }
 
