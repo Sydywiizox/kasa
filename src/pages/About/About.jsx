@@ -1,10 +1,28 @@
+import Collapse from '@components/Collapse/Collapse';
+
 function About() {
     return (
-        <div>
-            <h1>About</h1>
-            <p>
-                Kasa est une plateforme de location de logements de particulier à particulier. Elle met en relation des personnes souhaitant louer leur logement (ou une partie de leur logement) avec des personnes cherchant un logement pour une nuit, quelques jours, quelques semaines ou quelques mois.
-            </p>
+        <div className='collapse__container'>
+            <Collapse title="Test">
+                <ul>
+                    <li>test1</li>
+                    <li>test2</li>
+                    <li>test3</li>
+                    <li>test4</li>
+                    <li>test5</li>
+                    <li>test6</li>
+                </ul>
+            </Collapse>
+            <Collapse title="Test">
+                <ul>
+                    <li>test1</li>
+                    <li>test2</li>
+                    <li>test3</li>
+                    <li>test4</li>
+                    <li>test5</li>
+                    <li>test6</li>
+                </ul>
+            </Collapse>
         </div>
     );
 }
