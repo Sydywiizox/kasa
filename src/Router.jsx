@@ -5,13 +5,10 @@ import Home from './pages/Home/Home.jsx';
 import About from './pages/About/About.jsx';
 import Error404 from './pages/Error404/Error404.jsx';
 import SingleProperty from './pages/SingleProperty/SingleProperty.jsx';
-import BodyClassSwitcher from './BodyClassSwitcher.jsx';
-
 
 function Router() {
   return (
     <BrowserRouter>
-      <BodyClassSwitcher />
       <div className='spacer'>
         <Header />
         <Routes>
