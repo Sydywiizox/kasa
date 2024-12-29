@@ -1,0 +1,37 @@
+.slideshow {
+    position: relative;
+    height: 415px;
+    width: 100%;
+    color: white;
+    align-self: center;
+    border-radius: 25px;
+    overflow: hidden;
+    img {
+        height: 415px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.slide-index {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slide-prev, .slide-next {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    font-size: 80px;
+    border: none;
+    background: transparent;
+    color: white;
+    transform: translateY(-50%);
+}
+.slide-prev {
+    left: 23px;
+}
+.slide-next {
+    right: 23px;
+}
+

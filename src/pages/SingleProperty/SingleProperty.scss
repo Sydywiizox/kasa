@@ -1,0 +1,20 @@
+.single-title {
+    color: #FF6060;
+}
+.host-name {
+    border-radius: 50%;
+    height: 64px;
+    aspect-ratio: 1;
+}
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    .tag {
+        background-color: #FF6060;
+        border-radius: 10px;
+        padding: 5px 10px;
+        font-size: 14px;
+        color: #fff;
+    }
+}
