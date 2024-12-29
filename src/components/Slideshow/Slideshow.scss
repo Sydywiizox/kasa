@@ -6,12 +6,20 @@
     align-self: center;
     border-radius: 25px;
     overflow: hidden;
+    background-color: #000;
     img {
         aspect-ratio: 3;
         width: 100%;
         object-fit: cover;
     }
 }
+/*
+[data-orientation=portrait] {
+    img {
+        object-fit: contain;
+    }
+}
+    */
 .slide-index {
     position: absolute;
     bottom: 25px;
@@ -19,7 +27,8 @@
     transform: translateX(-50%);
     font-weight: 500;
 }
-.slide-prev, .slide-next {
+.slide-prev,
+.slide-next {
     position: absolute;
     top: 50%;
     cursor: pointer;
@@ -35,4 +44,3 @@
 .slide-next {
     right: 23px;
 }
-
