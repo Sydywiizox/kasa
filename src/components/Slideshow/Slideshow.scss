@@ -1,22 +1,23 @@
 .slideshow {
     position: relative;
-    height: 415px;
+    aspect-ratio: 3;
     width: 100%;
     color: white;
     align-self: center;
     border-radius: 25px;
     overflow: hidden;
     img {
-        height: 415px;
+        aspect-ratio: 3;
         width: 100%;
         object-fit: cover;
     }
 }
 .slide-index {
     position: absolute;
-    bottom: 0;
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
+    font-weight: 500;
 }
 .slide-prev, .slide-next {
     position: absolute;

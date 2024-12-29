@@ -16,7 +16,9 @@ function SingleProperty() {
 
     useEffect(() => {
         if (logements) {
-            const foundLogement = logements.find((logement) => logement.id === id);
+            const foundLogement = logements.find(
+                (logement) => logement.id === id
+            );
             if (foundLogement) {
                 setLogement(foundLogement);
             } else {
@@ -41,18 +43,40 @@ function SingleProperty() {
         <main>
             <section className="single-property">
                 <Slideshow images={logement.pictures} title={logement.title} />
-                <h1>{logement.title}</h1>
-                <p>{logement.location}</p>
-                <Rating rating={logement.rating} />
-                <img className="host-name" src={logement.host.picture} alt={logement.host.name} />
-                <Collapse title="Description">
-                    {logement.description}
-                </Collapse>
-                <Collapse title="Equipements">
-                    {logement.equipments.map((equipment, index) => (
-                        <p key={index}>{equipment}</p>
-                    ))}
-                </Collapse>
+                <div className="container">
+                    <div className="left">
+                        <h1 className="single-title">{logement.title}</h1>
+                        <p className="single-location">{logement.location}</p>
+                        <div className="tags">
+                            {logement.tags.map((tag, index) => (
+                                <span className="tag" key={index}>
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="right">
+                        <div className="host">
+                            <p>{logement.host.name}</p>
+                            <img
+                                className="host-name"
+                                src={logement.host.picture}
+                                alt={logement.host.name}
+                            />
+                        </div>
+                        <Rating rating={logement.rating} />
+                    </div>
+                </div>
+                <div className="collapses">
+                    <Collapse title="Description">
+                        {logement.description}
+                    </Collapse>
+                    <Collapse title="Equipements">
+                        {logement.equipments.map((equipment, index) => (
+                            <p key={index}>{equipment}</p>
+                        ))}
+                    </Collapse>
+                </div>
             </section>
         </main>
     );
