@@ -14,8 +14,10 @@ body {
 .spacer {
   flex: 1;
   margin-inline: 100px;
-  max-width: 1440px;
-  align-self: center;
+  @media screen and (min-width: 1440px) {
+    width: 1240px;
+    margin-inline: auto;
+  }
   @media screen and (max-width: 768px) {
     margin-inline: 20px;
   }
