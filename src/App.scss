@@ -1,31 +1,40 @@
-html, body {
-    height: 100%;
-    margin: 0;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 #root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .spacer {
-    flex: 1;
-    margin-inline: 100px;
-    @media screen and (max-width: 768px) {
-        margin-inline: 20px;
-    }
+  flex: 1;
+  margin-inline: 100px;
+  max-width: 1440px;
+  align-self: center;
+  @media screen and (max-width: 768px) {
+    margin-inline: 20px;
+  }
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }

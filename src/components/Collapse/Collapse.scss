@@ -1,48 +1,49 @@
 .collapse {
-    flex-grow: 1;
-    background-color: #f6f6f673;
+  flex-grow: 1;
+  background-color: #f6f6f673;
+  border-radius: 5px;
+  height: max-content;
+  &__header {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ff6060;
     border-radius: 5px;
-    height: max-content;
-    &__header {
-        color: #fff;
-        display: flex;
-        justify-content: space-between;
-        padding: 10px;
-        background-color: #FF6060;
-        border-radius: 5px;
-        font-weight: 700;
-        font-size: 18px;
-        align-items: center;
-        @media screen and (max-width: 768px) {
-            font-size: 13px;
-        }
-        .collapse__button {
-            color: #fff;
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-            font-size: 24px;
-            @media screen and (max-width: 768px) {
-                font-size: 17px;
-            }
-        }
+    font-weight: 700;
+    font-size: 18px;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      font-size: 13px;
+      padding-block: 4px;
     }
-    &__content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-        padding: 0 20px;
-        @media screen and (max-width: 768px) {
-            font-size: 12px;
-        }
+    .collapse__button {
+      color: #fff;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      font-size: 24px;
+      @media screen and (max-width: 768px) {
+        font-size: 17px;
+      }
     }
-    &__content--open {
-        max-height: max-content;
-        padding: 25px 20px 20px 20px;
+  }
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 20px;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
     }
-    &__content ul {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
+  }
+  &__content--open {
+    max-height: max-content;
+    padding: 25px 20px 20px 20px;
+  }
+  &__content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 }

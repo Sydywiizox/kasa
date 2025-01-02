@@ -1,13 +1,17 @@
 .rating {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  @media screen and (max-width: 768px) {
+    font-size: 13px;
+    gap: 6px;
+  }
 }
 .star-full {
-    color: #FF6060;
+  color: #ff6060;
 }
 .star-empty {
-    color: #E3E3E3;
+  color: #e3e3e3;
 }

@@ -1,17 +1,26 @@
 .slideshow {
-    position: relative;
+  position: relative;
+  aspect-ratio: 3;
+  width: 100%;
+  color: white;
+  align-self: center;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #000;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 768px) {
+    aspect-ratio: 1.4;
+    margin-bottom: 15px;
+  }
+  img {
     aspect-ratio: 3;
     width: 100%;
-    color: white;
-    align-self: center;
-    border-radius: 25px;
-    overflow: hidden;
-    background-color: #000;
-    img {
-        aspect-ratio: 3;
-        width: 100%;
-        object-fit: cover;
+    object-fit: cover;
+    @media screen and (max-width: 768px) {
+      aspect-ratio: 1.4;
     }
+  }
 }
 /*
 [data-orientation=portrait] {
@@ -21,26 +30,32 @@
 }
     */
 .slide-index {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: 500;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 500;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 .slide-prev,
 .slide-next {
-    position: absolute;
-    top: 50%;
-    cursor: pointer;
-    font-size: 80px;
-    border: none;
-    background: transparent;
-    color: white;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  font-size: 80px;
+  border: none;
+  background: transparent;
+  color: white;
+  transform: translateY(-50%);
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
 }
 .slide-prev {
-    left: 23px;
+  left: 23px;
 }
 .slide-next {
-    right: 23px;
+  right: 23px;
 }

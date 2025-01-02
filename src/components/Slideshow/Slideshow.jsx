@@ -1,26 +1,44 @@
-import { useState, useEffect } from 'react';
-import './Slideshow.scss';
+import { useEffect, useState } from "react";
+import "./Slideshow.scss";
 
 function Slideshow({ images, title }) {
-    const [index, setIndex] = useState(0);
-    const [orientation, setOrientation] = useState('landscape');
-    useEffect(() => {
-      const img = new Image();
-      img.src = images[index];
-      img.onload = () => {
-          if (img.width > img.height) {
-              setOrientation('landscape');
-          } else {
-              setOrientation('portrait');
-          }
-      };
+  const [index, setIndex] = useState(0);
+  const [orientation, setOrientation] = useState("landscape");
+  useEffect(() => {
+    const img = new Image();
+    img.src = images[index];
+    img.onload = () => {
+      if (img.width > img.height) {
+        setOrientation("landscape");
+      } else {
+        setOrientation("portrait");
+      }
+    };
   }, [index, images]);
   return (
     <div className="slideshow" data-orientation={orientation}>
-        {images.length > 1 && <button className='slide-prev' onClick={() => setIndex((index - 1 + images.length) % images.length)}><i className="fa-solid fa-chevron-left"></i></button>}
-        {images.length > 1 && <button className='slide-next' onClick={() => setIndex((index + 1) % images.length)}><i className="fa-solid fa-chevron-right"></i></button>}
-        <img key={index} src={images[index]} alt={title + "_" + (index+1)} />
-        {images.length > 1 && <p className='slide-index'>{index + 1}/{images.length}</p>}
+      {images.length > 1 && (
+        <button
+          className="slide-prev"
+          onClick={() => setIndex((index - 1 + images.length) % images.length)}
+        >
+          <i className="fa-solid fa-chevron-left"></i>
+        </button>
+      )}
+      {images.length > 1 && (
+        <button
+          className="slide-next"
+          onClick={() => setIndex((index + 1) % images.length)}
+        >
+          <i className="fa-solid fa-chevron-right"></i>
+        </button>
+      )}
+      <img key={index} src={images[index]} alt={title + "_" + (index + 1)} />
+      {images.length > 1 && (
+        <p className="slide-index">
+          {index + 1}/{images.length}
+        </p>
+      )}
     </div>
   );
 }
