@@ -1,6 +1,6 @@
-import Collapse from "@components/Collapse/Collapse";
-import Banner from "@components/Banner/Banner";
 import image from "@assets/banner_montagne.png";
+import Banner from "@components/Banner/Banner";
+import Collapse from "@components/Collapse/Collapse";
 import "./About.scss";
 
 function About() {

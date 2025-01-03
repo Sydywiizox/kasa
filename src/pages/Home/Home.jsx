@@ -13,7 +13,7 @@ function Home() {
       <section className="home">
         <Banner image={image} alt="mer" text="Chez vous, partout et ailleurs" />
         <div className="home__grid">
-          {loading && <div class="loader"></div>}
+          {loading && <div className="loader"></div>}
           {!loading && logements && !logements.length && (
             <div>Il n'y a aucun logement à afficher</div>
           )}

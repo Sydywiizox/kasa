@@ -26,7 +26,7 @@ function SingleProperty() {
   }, [logements, id, navigate]);
 
   if (loading) {
-    return <div class="loader"></div>;
+    return <div className="loader"></div>;
   }
 
   if (error) {
