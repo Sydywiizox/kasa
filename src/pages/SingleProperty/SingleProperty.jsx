@@ -74,6 +74,14 @@ function SingleProperty() {
   );
 }
 
+/**
+ * Given a string, this function splits it into words and returns a React component
+ * that displays each word on a separate line. The component is a React.Fragment
+ * so that it can be used as a single element in a parent component.
+ * @param {string} string - The string to be split and displayed.
+ * @returns {React.ReactElement} - A React component that displays the string
+ *                                split into words with line breaks.
+ */
 function addBrToString(string) {
   return string.split(" ").map((word, index) => (
     <React.Fragment key={index}>

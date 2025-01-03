@@ -1,6 +1,15 @@
 import { useEffect, useState } from "react";
 import "./Slideshow.scss";
 
+/**
+ * @function Slideshow
+ * @description Displays an image slideshow with navigation controls.
+ * @param {Object} props - The properties object.
+ * @param {string[]} props.images - An array of image URLs to display in the slideshow.
+ * @param {string} props.title - The title used as alt text for images.
+ * @returns {JSX.Element} The rendered slideshow component.
+ */
+
 function Slideshow({ images, title }) {
   const [index, setIndex] = useState(0);
   const [orientation, setOrientation] = useState("landscape");
