@@ -6,7 +6,6 @@
   align-self: center;
   border-radius: 25px;
   overflow: hidden;
-  background-color: #000;
   margin-bottom: 30px;
 
   @media screen and (max-width: 768px) {
@@ -23,12 +22,13 @@
   }
 }
 /*
-[data-orientation=portrait] {
-    img {
-        object-fit: contain;
-    }
+[data-orientation="portrait"] {
+  background-color: #000;
+  img {
+    object-fit: contain;
+  }
 }
-    */
+*/
 .slide-index {
   position: absolute;
   bottom: 25px;
