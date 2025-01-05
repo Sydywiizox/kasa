@@ -10,7 +10,6 @@ import "./Slideshow.scss";
  * @param {string} props.title - The title used as alt text for images.
  * @returns {JSX.Element} The rendered slideshow component.
  */
-
 function Slideshow({ images, title }) {
   const [index, setIndex] = useState(0);
   const [orientation, setOrientation] = useState("landscape");
