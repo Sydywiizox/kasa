@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
 import "./Slideshow.scss";
 
 /**
@@ -24,25 +25,57 @@ function Slideshow({ images, title }) {
       }
     };
   }, [index, images]);
+
+  const indexPrev = (index - 1 + images.length) % images.length;
+  const indexNext = (index + 1) % images.length;
+
+  const refImages = useRef(null);
+
+  function changeSlide(newIndex) {
+    if (newIndex < index) {
+      refImages.current.style.transform = "translateX(0%)";
+    } else {
+      refImages.current.style.transform = "translateX(-200%)";
+    }
+    refImages.current.style.transition = "transform 0.5s";
+    setTimeout(() => {
+      refImages.current.style.transform = "translateX(-100%)";
+      refImages.current.style.transition = "transform 0s";
+      if (newIndex < 0) {
+        setIndex(images.length - 1);
+      } else if (newIndex >= images.length) {
+        setIndex(0);
+      } else {
+        setIndex(newIndex);
+      }
+    }, 500);
+  }
+
   return (
     <div className="slideshow" data-orientation={orientation}>
       {images.length > 1 && (
-        <button
-          className="slide-prev"
-          onClick={() => setIndex((index - 1 + images.length) % images.length)}
-        >
+        <button className="slide-prev" onClick={() => changeSlide(index - 1)}>
           <i className="material-icons icon">arrow_back_ios</i>
         </button>
       )}
       {images.length > 1 && (
-        <button
-          className="slide-next"
-          onClick={() => setIndex((index + 1) % images.length)}
-        >
+        <button className="slide-next" onClick={() => changeSlide(index + 1)}>
           <i className="material-icons icon">arrow_forward_ios</i>
         </button>
       )}
-      <img key={index} src={images[index]} alt={title + "_" + (index + 1)} />
+      <div className="images" ref={refImages}>
+        <img
+          key={indexPrev}
+          src={images[indexPrev]}
+          alt={title + "_" + (indexPrev + 1)}
+        />
+        <img key={index} src={images[index]} alt={title + "_" + (index + 1)} />
+        <img
+          key={indexNext}
+          src={images[indexNext]}
+          alt={title + "_" + (indexNext + 1)}
+        />
+      </div>
       {images.length > 1 && (
         <p className="slide-index">
           {index + 1}/{images.length}
