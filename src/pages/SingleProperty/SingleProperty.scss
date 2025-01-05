@@ -24,6 +24,7 @@
     margin-top: 20px;
     @include respond-to-tablet {
       margin-top: 12px;
+      flex-wrap: wrap;
     }
     .tag {
       background-color: $main--color;
@@ -88,6 +89,9 @@
     }
     .left {
       width: 60%;
+      @include respond-to-tablet {
+        width: 100%;
+      }
     }
   }
   .collapses {
