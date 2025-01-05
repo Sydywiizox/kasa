@@ -1,3 +1,6 @@
+@use "@variables/colors" as *;
+@use "@variables/media" as *;
+
 .collapse {
   flex-grow: 1;
   background-color: #f6f6f673;
@@ -8,12 +11,12 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background-color: #ff6060;
+    background-color: $main--color;
     border-radius: 5px;
     font-weight: 700;
     font-size: 18px;
     align-items: center;
-    @media screen and (max-width: 768px) {
+    @include respond-to-tablet {
       font-size: 13px;
       padding-block: 4px;
     }
@@ -23,7 +26,13 @@
       background-color: transparent;
       cursor: pointer;
       font-size: 24px;
-      @media screen and (max-width: 768px) {
+      i {
+        transition: transform 0.3s ease-out;
+        &.up {
+          transform: rotate(180deg);
+        }
+      }
+      @include respond-to-tablet {
         font-size: 17px;
       }
     }
@@ -33,7 +42,7 @@
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     padding: 0 20px;
-    @media screen and (max-width: 768px) {
+    @include respond-to-tablet {
       font-size: 12px;
     }
   }

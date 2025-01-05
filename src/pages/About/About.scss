@@ -1,15 +1,17 @@
+@use "@variables/media" as *;
+
 .about {
   display: flex;
   gap: 30px;
   flex-direction: column;
   align-items: center;
   margin-bottom: 38px;
-  @media screen and (max-width: 768px) {
+  @include respond-to-tablet {
     gap: 20px;
   }
   .collapse {
     width: 82.5%;
-    @media screen and (max-width: 768px) {
+    @include respond-to-tablet {
       width: 100%;
     }
   }

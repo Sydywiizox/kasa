@@ -1,35 +1,38 @@
+@use "@variables/media" as *;
+
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 68px;
+  font-weight: 500;
+  margin-block: 45px 50px;
+  @include respond-to-tablet {
+    margin-block: 20px 27px;
+    height: 46.88px;
+    a,
+    img {
+      height: 100%;
+    }
+  }
+  &__nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 68px;
-    font-weight: 500;
-    margin-block: 45px 50px;
-    @media screen and (max-width: 768px) {
-        margin-block: 20px 27px;
-        height: 46.88px;
-        a, img {
-            height: 100%;
-        }
+    list-style: none;
+    font-size: 24px;
+    gap: 57px;
+    @include respond-to-tablet {
+      gap: 26px;
+      text-transform: uppercase;
     }
-    &__nav {
-        display: flex;
-        list-style: none;
-        font-size: 24px;
-        gap: 57px;
-        @media screen and (max-width: 768px) {
-            gap: 26px;
-            text-transform: uppercase;
-        }
-        & a {
-            text-decoration: none;
-            color: #000;
-            &.active {
-                text-decoration: underline;
-            }
-        }
-        @media screen and (max-width: 768px) {
-            font-size: 12px;
-        }
+    & a {
+      text-decoration: none;
+      color: #000;
+      &.active {
+        text-decoration: underline;
+      }
     }
+    @include respond-to-tablet {
+      font-size: 12px;
+    }
+  }
 }

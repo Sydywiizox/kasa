@@ -1,16 +1,19 @@
+@use "@variables/colors" as *;
+@use "@variables/media" as *;
+
 .rating {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
   font-size: 24px;
-  @media screen and (max-width: 768px) {
+  @include respond-to-tablet {
     font-size: 13px;
     gap: 6px;
   }
 }
 .star-full {
-  color: #ff6060;
+  color: $main--color;
 }
 .star-empty {
   color: #e3e3e3;

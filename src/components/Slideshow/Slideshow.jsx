@@ -31,7 +31,7 @@ function Slideshow({ images, title }) {
           className="slide-prev"
           onClick={() => setIndex((index - 1 + images.length) % images.length)}
         >
-          <i className="fa-solid fa-chevron-left"></i>
+          <i className="material-icons icon">arrow_back_ios</i>
         </button>
       )}
       {images.length > 1 && (
@@ -39,7 +39,7 @@ function Slideshow({ images, title }) {
           className="slide-next"
           onClick={() => setIndex((index + 1) % images.length)}
         >
-          <i className="fa-solid fa-chevron-right"></i>
+          <i className="material-icons icon">arrow_forward_ios</i>
         </button>
       )}
       <img key={index} src={images[index]} alt={title + "_" + (index + 1)} />

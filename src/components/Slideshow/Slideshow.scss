@@ -1,3 +1,5 @@
+@use "@variables/media" as *;
+
 .slideshow {
   position: relative;
   aspect-ratio: 3;
@@ -8,7 +10,7 @@
   overflow: hidden;
   margin-bottom: 30px;
 
-  @media screen and (max-width: 768px) {
+  @include respond-to-tablet {
     aspect-ratio: 1.4;
     margin-bottom: 15px;
   }
@@ -16,7 +18,7 @@
     aspect-ratio: 3;
     width: 100%;
     object-fit: cover;
-    @media screen and (max-width: 768px) {
+    @include respond-to-tablet {
       aspect-ratio: 1.4;
     }
   }
@@ -35,7 +37,7 @@
   left: 50%;
   transform: translateX(-50%);
   font-weight: 500;
-  @media screen and (max-width: 768px) {
+  @include respond-to-tablet {
     display: none;
   }
 }
@@ -44,12 +46,14 @@
   position: absolute;
   top: 50%;
   cursor: pointer;
-  font-size: 80px;
   border: none;
   background: transparent;
   color: white;
   transform: translateY(-50%);
-  @media screen and (max-width: 768px) {
+}
+.icon {
+  font-size: 84px;
+  @include respond-to-tablet {
     font-size: 20px;
   }
 }

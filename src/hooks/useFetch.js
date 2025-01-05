@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { useRefSync } from "./useRefSync.js";
 
@@ -23,35 +22,16 @@ export function useFetch(url, options) {
 
   useEffect(() => {
     setLoading(true);
-    /*
-      fetch(url, {
-        ...optionsRef.current,
-        headers: {
-          Accept: "application/json; charset=UTF-8",
-          ...optionsRef.current?.headers,
-        },
-      })
-        .then((r) => r.json())
-        .then((data) => {
-          setData(data);
-        })
-        .catch((e) => {
-          setError(e);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-      */
-    axios
-      .get(url, {
-        headers: {
-          Accept: "application/json; charset=UTF-8",
-          ...optionsRef.current?.headers,
-        },
-        params: optionsRef.current?.params,
-      })
-      .then((response) => {
-        setData(response.data);
+    fetch(url, {
+      ...optionsRef.current,
+      headers: {
+        Accept: "application/json; charset=UTF-8",
+        ...optionsRef.current?.headers,
+      },
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        setData(data);
       })
       .catch((e) => {
         setError(e);
