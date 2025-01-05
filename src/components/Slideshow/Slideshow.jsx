@@ -32,15 +32,14 @@ function Slideshow({ images, title }) {
   const refImages = useRef(null);
 
   function changeSlide(newIndex) {
+    refImages.current.style.transition = "transform 0.5s ease-in-out";
     if (newIndex < index) {
-      refImages.current.style.transform = "translateX(0%)";
+      refImages.current.style.transform = "translateX(100%)";
     } else {
-      refImages.current.style.transform = "translateX(-200%)";
-    }
-    refImages.current.style.transition = "transform 0.5s";
-    setTimeout(() => {
       refImages.current.style.transform = "translateX(-100%)";
-      refImages.current.style.transition = "transform 0s";
+    }
+    setTimeout(() => {
+      refImages.current.style.transition = "none";
       if (newIndex < 0) {
         setIndex(images.length - 1);
       } else if (newIndex >= images.length) {
@@ -48,6 +47,7 @@ function Slideshow({ images, title }) {
       } else {
         setIndex(newIndex);
       }
+      refImages.current.style.transform = "translateX(0)";
     }, 500);
   }
 
