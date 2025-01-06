@@ -1,15 +1,15 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Footer from './components/Footer/Footer.jsx';
-import Header from './components/Header/Header.jsx';
-import Home from './pages/Home/Home.jsx';
-import About from './pages/About/About.jsx';
-import Error404 from './pages/Error404/Error404.jsx';
-import SingleProperty from './pages/SingleProperty/SingleProperty.jsx';
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer/Footer.jsx";
+import Header from "./components/Header/Header.jsx";
+import About from "./pages/About/About.jsx";
+import Error404 from "./pages/Error404/Error404.jsx";
+import Home from "./pages/Home/Home.jsx";
+import SingleProperty from "./pages/SingleProperty/SingleProperty.jsx";
 
 function Router() {
   return (
     <BrowserRouter>
-      <div className='spacer'>
+      <div className="spacer">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

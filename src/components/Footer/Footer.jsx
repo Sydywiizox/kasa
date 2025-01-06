@@ -1,5 +1,5 @@
-import "./Footer.scss";
 import logo from "@assets/logo_white.png";
+import "./Footer.scss";
 
 /**
  * Footer component, displays the logo and copyright information
