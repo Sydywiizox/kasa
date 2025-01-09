@@ -18,7 +18,7 @@ function Collapse({ title, children }) {
       <div className="collapse__header">
         {title}
         <button className="collapse__button" onClick={() => setIsOpen(!isOpen)}>
-          <i className={`fa-solid fa-chevron-down ${isOpen ? "" : "up"}`}></i>
+          <i className={`fa-solid fa-chevron-down  ${!isOpen && "up"}`}></i>
         </button>
       </div>
       <div
