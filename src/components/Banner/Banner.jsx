@@ -15,7 +15,7 @@ import "./Banner.scss";
 function Banner({ image, alt, text, shadow = true }) {
   return (
     <div
-      className={`banner ${text ? "banner--opacity" : ""} ${
+      className={`banner ${text && "banner--opacity"} ${
         shadow ? "banner--shadow" : ""
       }`}
     >
