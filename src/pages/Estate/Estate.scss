@@ -1,8 +1,8 @@
 @use "@variables/colors" as *;
 @use "@variables/media" as *;
 
-.single-property {
-  .single-title {
+.estate {
+  .estate-title {
     color: $main--color;
     font-weight: 500;
     font-size: 36px;
@@ -10,7 +10,7 @@
       font-size: 18px;
     }
   }
-  .single-location {
+  .estate-location {
     font-weight: 500;
     @include respond-to-tablet {
       font-size: 14px;

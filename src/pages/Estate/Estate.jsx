@@ -4,11 +4,11 @@ import Slideshow from "@components/Slideshow/Slideshow";
 import { useFetch } from "@hooks/useFetch.js";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import "./SingleProperty.scss";
+import "./Estate.scss";
 
 const LOGEMENTS__PATH = "/src/data/logements.json";
 
-function SingleProperty() {
+function Estate() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { loading, data: logements, error } = useFetch(LOGEMENTS__PATH);
@@ -39,12 +39,12 @@ function SingleProperty() {
 
   return (
     <main>
-      <section className="single-property">
+      <section className="estate">
         <Slideshow images={logement.pictures} title={logement.title} />
         <div className="container">
           <div className="left">
-            <h1 className="single-title">{logement.title}</h1>
-            <p className="single-location">{logement.location}</p>
+            <h1 className="estate-title">{logement.title}</h1>
+            <p className="estate-location">{logement.location}</p>
             <div className="tags">
               {logement.tags.map((tag, index) => (
                 <span className="tag" key={index}>
@@ -91,4 +91,4 @@ function addBrToString(string) {
   ));
 }
 
-export default SingleProperty;
+export default Estate;

@@ -7,12 +7,12 @@ import "./Card.scss";
  * @prop {string} image - The image source.
  * @prop {string} alt - The alt text for the image.
  * @prop {string} title - The title of the card.
- * @prop {string} id - The id of the card that will be used to navigate to the SingleProperty page.
+ * @prop {string} id - The id of the card that will be used to navigate to the Estate page.
  * @returns {JSX.Element} A clickable card.
  */
 function Card({ image, alt, title, id }) {
   return (
-    <Link to={`/SingleProperty/${id}`}>
+    <Link to={`/Estate/${id}`}>
       <div className="card">
         {image && <img src={image} alt={alt} className="card__image" />}
         <h2 className="card__title">{title}</h2>
