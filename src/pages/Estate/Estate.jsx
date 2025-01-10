@@ -30,11 +30,7 @@ function Estate() {
   }
 
   if (error) {
-    return <div>Erreur : {error.message}</div>;
-  }
-
-  if (!logement) {
-    return null;
+    return <div className="error">Erreur : {error.message}</div>;
   }
 
   return (
