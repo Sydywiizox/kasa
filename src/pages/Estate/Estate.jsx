@@ -33,6 +33,10 @@ function Estate() {
     return <div className="error">Erreur : {error.message}</div>;
   }
 
+  if (!logement) {
+    return <div>Logement introuvable</div>;
+  }
+
   return (
     <main>
       <section className="estate">
