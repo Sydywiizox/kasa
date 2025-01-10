@@ -23,7 +23,7 @@ function Estate() {
         navigate("/404");
       }
     }
-  }, [logements, id, navigate]);
+  }, [logements, id]);
 
   if (loading) {
     return <div className="loader"></div>;
