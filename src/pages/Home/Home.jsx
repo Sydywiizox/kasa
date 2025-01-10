@@ -25,7 +25,6 @@ function Home() {
                 id={logement.id}
                 title={logement.title}
                 image={logement.cover}
-                alt={logement.alt}
               />
             ))}
         </div>
