@@ -1,0 +1,65 @@
+@use "@variables/media" as *;
+
+.slideshow {
+  position: relative;
+  aspect-ratio: 3;
+  width: 100%;
+  color: white;
+  align-self: center;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  @include respond-to-tablet {
+    aspect-ratio: 1.4;
+    margin-bottom: 15px;
+  }
+  img {
+    aspect-ratio: 3;
+    width: 100%;
+    object-fit: cover;
+    @include respond-to-tablet {
+      aspect-ratio: 1.4;
+    }
+  }
+}
+/*
+[data-orientation="portrait"] {
+  background-color: #000;
+  img {
+    object-fit: contain;
+  }
+}
+*/
+.slide-index {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 500;
+  @include respond-to-tablet {
+    display: none;
+  }
+}
+.slide-prev,
+.slide-next {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: white;
+  transform: translateY(-50%);
+}
+.icon {
+  font-size: 84px;
+  @include respond-to-tablet {
+    font-size: 20px;
+  }
+}
+.slide-prev {
+  left: 23px;
+}
+.slide-next {
+  right: 23px;
+}
