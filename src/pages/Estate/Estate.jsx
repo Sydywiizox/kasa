@@ -34,7 +34,7 @@ function Estate() {
   }
 
   if (!logement) {
-    return <div>Logement introuvable</div>;
+    return null;
   }
 
   return (
