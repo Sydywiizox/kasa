@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./Estate.scss";
 
-const LOGEMENTS__PATH = "/src/data/logements.json";
+const LOGEMENTS__PATH = "/data/logements.json";
 
 function Estate() {
   const { id } = useParams();

@@ -4,7 +4,7 @@ import Card from "@components/Card/Card";
 import { useFetch } from "@hooks/useFetch.js";
 import "./Home.scss";
 
-const LOGEMENTS__PATH = "/src/data/logements.json";
+const LOGEMENTS__PATH = "/data/logements.json";
 
 function Home() {
   const { loading, data: logements, error } = useFetch(LOGEMENTS__PATH);
